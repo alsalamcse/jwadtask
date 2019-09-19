@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':app', ':app', ':app'
 rootProject.name='jwadtaskmanager'
