@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "439641186380",
+    "firebase_url": "https://jwadtaskmanager.firebaseio.com",
+    "project_id": "jwadtaskmanager",
+    "storage_bucket": "jwadtaskmanager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439641186380:android:e0270b9f72615fb84054e9",
+        "android_client_info": {
+          "package_name": "com.raslan.jwadtaskmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439641186380-m5domaji4lav7nkr6u0dtqoo4q10b3mt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raslan.jwadtaskmanager",
+            "certificate_hash": "8d4e87598d212bdb282d05faa7766dc9c486dbdf"
+          }
+        },
+        {
+          "client_id": "439641186380-cd9n86ooie087spkat920s9r2ljh99h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChf8RNt5XHXUSN-IF8ARModQZUgwuhE9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439641186380-cd9n86ooie087spkat920s9r2ljh99h1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

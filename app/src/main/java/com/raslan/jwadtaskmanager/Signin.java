@@ -18,9 +18,16 @@ public class Signin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sigin);
 
-        emailtx=(EditText)findViewById(R.id.emailtx);
-        passtx=(EditText)findViewById(R.id.passtx);
-        signinbt=(Button)findViewById(R.id.signinbt);
-        signupbt=(Button)findViewById(R.id.siupbt);
+        emailtx = (EditText) findViewById(R.id.emailtx);
+        passtx = (EditText) findViewById(R.id.passtx);
+        signinbt = (Button) findViewById(R.id.signinbt);
+        signupbt = (Button) findViewById(R.id.siupbt);
+
+
+    }
+
+    private void dataHandler() {
+        String email = emailtx.getText().toString();
+        String password = passtx.getText().toString();
     }
 }
