@@ -7,55 +7,52 @@
     tools:context=".Signin">
 
     <Button
+        android:id="@+id/signinbt"
+        android:layout_width="93dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginBottom="57dp"
+        android:text="Signin"
+        app:layout_constraintBottom_toTopOf="@+id/siupbt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passtx" />
+
+    <Button
         android:id="@+id/siupbt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="344dp"
+        android:layout_marginBottom="286dp"
         android:text="Signup"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/signinbt"
         app:layout_constraintTop_toBottomOf="@+id/signinbt" />
-
-    <Button
-        android:id="@+id/signinbt"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginLeft="71dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginRight="71dp"
-        android:layout_marginBottom="21dp"
-        android:text="Signin"
-        app:layout_constraintBottom_toTopOf="@+id/siupbt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/emailtx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="67dp"
-        android:ems="10"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/passtx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginBottom="103dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/signinbt"
         app:layout_constraintStart_toStartOf="@+id/emailtx"
         app:layout_constraintTop_toBottomOf="@+id/emailtx" />
+
+    <EditText
+        android:id="@+id/emailtx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="34dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/passtx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

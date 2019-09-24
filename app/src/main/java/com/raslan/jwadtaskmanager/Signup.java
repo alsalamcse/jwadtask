@@ -3,6 +3,7 @@ package com.raslan.jwadtaskmanager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
@@ -28,5 +29,16 @@ public class Signup extends AppCompatActivity {
         repastx=(EditText)findViewById(R.id.repastx);
         siupbt=(Button) findViewById(R.id.siupbt);
 
+        siupbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+
+
     }
+    private void datahandler()
 }
