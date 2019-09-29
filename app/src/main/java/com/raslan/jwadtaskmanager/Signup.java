@@ -40,5 +40,24 @@ public class Signup extends AppCompatActivity {
 
 
     }
-    private void datahandler()
+    private void datahandler(){
+        boolean isok=true;
+        String fina=finatx.getText().toString();
+        String lana=lanatx.getText().toString();
+        String phnu=phtx.getText().toString();
+        String em=emtx.getText().toString();
+        String pas=pastx.getText().toString();
+        String repas=repastx.getText().toString();
+        if (em.length()<4||
+         em.indexOf('@')<=0||
+        em.indexOf('.')<0)
+        {
+        emtx.setError("Wrong error");
+        isok=false;
+        }
+        if (pastx.length()<8|| pastx.equals(repastx)==false)
+        {
+         //tas7e7 fok ifat o stringat
+        }
+    }
 }
