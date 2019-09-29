@@ -1,5 +1,6 @@
 package com.raslan.jwadtaskmanager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -7,6 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Signup extends AppCompatActivity {
     private EditText finatx;
@@ -55,9 +61,39 @@ public class Signup extends AppCompatActivity {
         emtx.setError("Wrong error");
         isok=false;
         }
-        if (pastx.length()<8|| pastx.equals(repastx)==false)
+        if (pas.length()<8|| pastx.equals(repas)==false)
         {
-         //tas7e7 fok ifat o stringat
+         pastx.setError("have to be at least 8 letters");
+         pastx.setError("have to be at least 8 char and the same password");
+         isok=false;
+        }
+        if (fina.length()==0)
+        {
+            finatx.setError("enter name");
+            isok=false;
+        }
+        if (isok)
+        {
+            createAcount(em,pas,fina,lana,phnu);
         }
     }
+
+    private void createAcount(String em, String pas, String fina, String lana, String phnu)
+    {
+        FirebaseAuth auth=FirebaseAuth.getInstance();
+        auth.createUserWithEmailAndPassword(em,pas).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful())
+                {
+                    finish();
+                }
+                else
+                {
+                    emtx.setError("sign up failed");
+                }
+            }
+             });
+    }
+
 }
