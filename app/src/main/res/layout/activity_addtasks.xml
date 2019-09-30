@@ -36,13 +36,15 @@
     <SeekBar
         android:id="@+id/seba"
         android:layout_width="191dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="48dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="286dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginBottom="86dp"
+        app:layout_constraintBottom_toTopOf="@+id/savebt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/sutx" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -58,4 +60,15 @@
         app:layout_constraintEnd_toStartOf="@+id/seba"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sutx" />
+
+    <Button
+        android:id="@+id/savebt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="270dp"
+        android:text="save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seba" />
 </androidx.constraintlayout.widget.ConstraintLayout>

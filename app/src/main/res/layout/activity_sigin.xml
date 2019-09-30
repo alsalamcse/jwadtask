@@ -10,29 +10,27 @@
         android:id="@+id/signinbt"
         android:layout_width="93dp"
         android:layout_height="0dp"
-        android:layout_marginStart="139dp"
-        android:layout_marginLeft="139dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginBottom="34dp"
         android:text="Signin"
         app:layout_constraintBottom_toTopOf="@+id/siupbt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passtx" />
+        app:layout_constraintEnd_toEndOf="@+id/passtx"
+        app:layout_constraintStart_toStartOf="@+id/passtx" />
 
     <Button
         android:id="@+id/siupbt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="286dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:text="Signup"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/signinbt"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signinbt" />
 
     <EditText
         android:id="@+id/passtx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="103dp"
+        android:layout_marginBottom="36dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"

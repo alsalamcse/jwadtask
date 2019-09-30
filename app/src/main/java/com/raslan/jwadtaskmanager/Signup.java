@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -31,13 +32,14 @@ public class Signup extends AppCompatActivity {
         lanatx=(EditText)findViewById(R.id.lanatx);
         phtx=(EditText)findViewById(R.id.phtx);
         emtx=(EditText)findViewById(R.id.emtx);
-        pastx=(EditText)findViewById(R.id.passtx);
+        pastx=(EditText)findViewById(R.id.pastx);
         repastx=(EditText)findViewById(R.id.repastx);
         siupbt=(Button) findViewById(R.id.siupbt);
 
         siupbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                datahandler();
 
             }
         });
@@ -61,9 +63,9 @@ public class Signup extends AppCompatActivity {
         emtx.setError("Wrong error");
         isok=false;
         }
-        if (pas.length()<8|| pastx.equals(repas)==false)
+        if (pas.length()<8|| pas.equals(repas)==false)
         {
-         pastx.setError("have to be at least 8 letters");
+         repastx.setError("have to be at least 8 letters");
          pastx.setError("have to be at least 8 char and the same password");
          isok=false;
         }
@@ -86,6 +88,7 @@ public class Signup extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 {
+                    Toast.makeText(Signup.this, "signup Successful", Toast.LENGTH_SHORT).show();
                     finish();
                 }
                 else
