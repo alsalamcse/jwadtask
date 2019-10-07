@@ -43,7 +43,9 @@ public class Signin extends AppCompatActivity {
 
         signinbt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+                dataHandler();
 
             }
         });

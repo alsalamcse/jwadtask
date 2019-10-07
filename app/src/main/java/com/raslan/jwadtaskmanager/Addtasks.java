@@ -81,16 +81,16 @@ public class Addtasks extends AppCompatActivity {
         reference.child("tasks").child(key).setValue(t).addOnCompleteListener(Addtasks.this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()){
+                if (task.isSuccessful()) {
                     Toast.makeText(Addtasks.this, "Add Successful", Toast.LENGTH_SHORT).show();
                     finish();
                 }
-                else{
-                    Toast.makeText(Addtasks.this, "Add Failed"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                     else {
+                    Toast.makeText(Addtasks.this, "Add Failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     task.getException().printStackTrace();
                 }
             }
-        }
+        });
 
 
     }
