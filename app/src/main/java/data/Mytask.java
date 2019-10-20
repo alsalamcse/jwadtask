@@ -5,6 +5,7 @@ public class Mytask {
     private String title;
     private String subject;
     private int important;
+    private String owner;
 
     public String getKey() {
         return key;
@@ -36,6 +37,14 @@ public class Mytask {
 
     public void setImportant(int important) {
         this.important = important;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     @Override

@@ -57,16 +57,16 @@ public class Signin extends AppCompatActivity {
         String password = passtx.getText().toString();
         boolean isok=true;
 
-//        if (email.length()<4)
-//        {
-//            emailtx.setError("email length error");
-//            isok=false;
-//        }
-//        if(email.indexOf("@")<0 || email.indexOf(".")<0)
-//        {
-//            emailtx.setError("email wrong format");
-//            isok=false;
-//        }
+        if (email.length()<4)
+       {
+           emailtx.setError("email length error");
+           isok=false;
+       }
+       if(email.indexOf("@")<0 || email.indexOf(".")<0)
+       {
+            emailtx.setError("email wrong format");
+            isok=false;
+       }
         if (isValidEmailAddress(email)==false)
         {
             emailtx.setError("Invalid Email");
