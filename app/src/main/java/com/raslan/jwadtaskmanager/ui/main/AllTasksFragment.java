@@ -1,4 +1,4 @@
-package com.raslan.jwadtaskmanager;
+package com.raslan.jwadtaskmanager.ui.main;
 
 
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.raslan.jwadtaskmanager.R;
 
 import data.Mytask;
 
