@@ -22,6 +22,10 @@ public class TasksAdapter extends ArrayAdapter<Mytask> {
         super(context, resource);
     }
 
+    public TasksAdapter(Context context) {
+        super(context,R.layout.taskitem);
+    }
+
     @NonNull
     @Override
 

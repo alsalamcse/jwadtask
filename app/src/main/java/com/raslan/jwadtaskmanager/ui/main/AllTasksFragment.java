@@ -60,11 +60,12 @@ public class AllTasksFragment extends Fragment {
         FirebaseAuth auth=FirebaseAuth.getInstance();
         String uid= auth.getUid();
         DatabaseReference reference = database.getReference();
-        tasksAdapter.clear();
+
         reference.child("tasks").child(uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
+                tasksAdapter.clear();
                 for (DataSnapshot d: dataSnapshot.getChildren())   //data snapshot ns5a 3n jme3 almo3teat almojoda t7t uid
                 {
                     Mytask t=d.getValue(Mytask.class);
