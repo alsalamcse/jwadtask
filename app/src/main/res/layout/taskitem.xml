@@ -10,7 +10,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="290dp">
+            android:layout_height="290dp"
+            android:background="#2196F3">
 
             <TextView
                 android:id="@+id/itmTVTitle"

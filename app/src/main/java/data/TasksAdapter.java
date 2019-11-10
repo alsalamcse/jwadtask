@@ -33,7 +33,7 @@ public class TasksAdapter extends ArrayAdapter<Mytask> {
 
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent)
     {
-        View vitem= LayoutInflater.from(getContext()).inflate(R.layout.taskitem,parent,true);
+        View vitem= LayoutInflater.from(getContext()).inflate(R.layout.taskitem,parent,false);
         TextView tvTitle=vitem.findViewById(R.id.itmTvSubject);
         TextView tvsubject=vitem.findViewById(R.id.itmTvSubject);
         ImageView tvimage=vitem.findViewById(R.id.itmImdInfo);
