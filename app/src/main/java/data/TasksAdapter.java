@@ -42,6 +42,9 @@ public class TasksAdapter extends ArrayAdapter<Mytask> {
 
         Mytask mytask=getItem(position);
 
+        //todo  tepol baero3 m7eka
+        tvcheckbox.setOnCheckedChangeListener();
+
         tvTitle.setText(mytask.getTitle());
         tvsubject.setText(mytask.getSubject());
        tvratingbar.setRating(mytask.getImportant());
