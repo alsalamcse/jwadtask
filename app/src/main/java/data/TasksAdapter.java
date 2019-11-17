@@ -11,6 +11,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -46,25 +47,32 @@ public class TasksAdapter extends ArrayAdapter<Mytask> {
         final Mytask mytask=getItem(position);
 
         //todo  tepol baero3 m7eka
-        tvcheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        tvcheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
             @Override
-            // todo albramtrat al bbtlkaha dalt m3alj al7dth btdl 3la ake sbb al7dth
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked)
-                {
-                    // todo delete this item
-                    FirebaseUtils.getRefernce().child(mytask.getKey()).removeValue(new DatabaseReference.CompletionListener() {
-                        @Override
-                        public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                            if (databaseError==null)
-                            { }
-                    });
-                }
+
+                FirebaseUtils.getRefernce().child(mytask.getKey()).removeValue(new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
+                        if (databaseError==null)
+                        {
+                            Toast.makeText(getContext(),"deleted",Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(getContext(),"notdeleted"+databaseError.getMessage(),Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
 
             }
+
         });
 
-        tvTitle.setText(mytask.getTitle());
+
+                tvTitle.setText(mytask.getTitle());
         tvsubject.setText(mytask.getSubject());
        tvratingbar.setRating(mytask.getImportant());
        tvcheckbox.setChecked(false);
