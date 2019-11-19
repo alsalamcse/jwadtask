@@ -70,6 +70,12 @@ public class TasksAdapter extends ArrayAdapter<Mytask> {
             }
 
         });
+        tvimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), mytask.getTitle(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
                 tvTitle.setText(mytask.getTitle());
@@ -83,4 +89,5 @@ public class TasksAdapter extends ArrayAdapter<Mytask> {
 
 
     }
+    public void Show men
 }
