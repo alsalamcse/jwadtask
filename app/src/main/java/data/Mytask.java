@@ -15,7 +15,7 @@ public class Mytask {
         this.key = key;
     }
 
-    public String getTitle() {
+    public static String getTitle() {
         return title;
     }
 
